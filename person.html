@@ -239,7 +239,7 @@
         
         founder.forEach(p => founderList.appendChild(createCard(p, true)));
         leaders.forEach(p => leaderList.appendChild(createCard(p, true)));
-        members.forEach(p => memberList.appendChild(createCard(p, true)));
+        members.forEach(p => memberList.appendChild(createCard(p, false)));
 
         const searchInput = document.getElementById("searchInput");
         searchInput.addEventListener("input", e => {
@@ -252,6 +252,7 @@
   </script>
 </body>
 </html>
+
 
 
 
