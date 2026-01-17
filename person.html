@@ -224,7 +224,6 @@
 
         const founder = data.filter(p => p.permission === "founder");
         const leaders = data.filter(p => p.permission === "leader");
-        const members = data.filter(p => p.permission === "member");
 
         function createCard(person, isLeader=false) {
           const imgSrc = person.image && person.image.trim() !== "" ? person.image : defaultImage;
@@ -253,6 +252,7 @@
   </script>
 </body>
 </html>
+
 
 
 
