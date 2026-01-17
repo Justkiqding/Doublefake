@@ -183,6 +183,12 @@
     <i class='bx bx-search'></i>
     <input type="text" id="searchInput" placeholder="ค้นหารายชื่อ...">
   </div>
+  
+   <div class="container">
+    <section class="founder">
+      <h2>Founder</h2>
+      <div class="list" id="leaderList"></div>
+    </section>
 
   <div class="container">
     <section class="leader">
@@ -204,9 +210,11 @@
     fetch("person.json")
       .then(res => res.json())
       .then(data => {
+        const FounderList = document.getElementById("founderList");
         const leaderList = document.getElementById("leaderList");
         const memberList = document.getElementById("memberList");
 
+        const founder = data.filter(p => p.permission === "founder");
         const leaders = data.filter(p => p.permission === "leader");
         const members = data.filter(p => p.permission === "member");
 
@@ -221,7 +229,8 @@
           `;
           return div;
         }
-
+        
+        founder.forEach(p => founderList.appendChild(createCard(p, true)));
         leaders.forEach(p => leaderList.appendChild(createCard(p, true)));
         members.forEach(p => memberList.appendChild(createCard(p, true)));
 
@@ -236,6 +245,7 @@
   </script>
 </body>
 </html>
+
 
 
 
