@@ -232,6 +232,7 @@
           div.innerHTML = `
             <img src="${imgSrc}" class="profile" alt="profile">
             <h3>${person.name}${isLeader ? ' <i class="bx bx-crown"></i>' : ''}</h3>
+            <h3>${person.name}${isMember ? ' <i class="bx bx-star"></i>' : ''}</h3>
             <a href="${person.facebook}" target="_blank">Facebook</a>
           `;
           return div;
@@ -239,7 +240,7 @@
         
         founder.forEach(p => founderList.appendChild(createCard(p, true)));
         leaders.forEach(p => leaderList.appendChild(createCard(p, true)));
-        members.forEach(p => memberList.appendChild(createCard(p, false)));
+        members.forEach(p => memberList.appendChild(createCard(p, true)));
 
         const searchInput = document.getElementById("searchInput");
         searchInput.addEventListener("input", e => {
@@ -252,6 +253,7 @@
   </script>
 </body>
 </html>
+
 
 
 
