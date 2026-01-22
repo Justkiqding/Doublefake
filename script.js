@@ -104,6 +104,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let isPlaying = false;
 
+   document.addEventListener("click", () => {
+    if (!isPlaying) {
+      music.volume = 0.5;
+      music.play().catch(() => {});
+      isPlaying = true;
+      localStorage.setItem("musicPlaying", "true");
+    }
+  }, { once: true });
+
   if (localStorage.getItem("musicPlaying") === "true") {
     document.addEventListener("click", () => {
       music.volume = 0.5;
@@ -141,6 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 
 
 
