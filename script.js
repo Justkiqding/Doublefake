@@ -129,13 +129,18 @@ document.addEventListener("DOMContentLoaded", () => {
       soundToggle.textContent = "🔊";
       soundToggle.classList.remove("off");
       isPlaying = true;
+      
+      localStorage.setItem("musicPlaying", "true");
     } else {
       music.pause();
       soundToggle.textContent = "🔇";
       soundToggle.classList.add("off");
       isPlaying = false;
+
+      localStorage.setItem("musicPlaying", "false");
     }
   });
 });
+
 
 
