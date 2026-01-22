@@ -206,3 +206,24 @@ footer {
   #circle { width: 180px; height: 180px; filter: blur(50px); }
 }
 
+.sound-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.sound-toggle:hover {
+  transform: scale(1.1);
+}
+
