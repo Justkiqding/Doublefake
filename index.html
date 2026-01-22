@@ -32,10 +32,43 @@
     </svg>
   </div>
 
-<!-- Sound Toggle -->
-<div class="sound-toggle" id="soundToggle" title="Sound ON / OFF">
-  🔇
+<!-- Theme Toggle -->
+<div class="theme-toggle" id="themeToggle" title="Toggle Light/Dark Mode">
+  <svg id="moonIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79Z"></path>
+  </svg>
+  <svg id="sunIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  </svg>
 </div>
+
+<!-- 🔊 Sound Toggle (วางตรงนี้เลย) -->
+<div class="sound-toggle theme-toggle" id="soundToggle" title="Sound ON / OFF">
+  <!-- ไอคอนเปิดเสียง -->
+  <svg id="soundOn" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+       stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+    <path d="M19.07 4.93a9 9 0 0 1 0 14.14"></path>
+  </svg>
+
+  <!-- ไอคอนปิดเสียง -->
+  <svg id="soundOff" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"
+       stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none">
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+    <line x1="23" y1="9" x2="17" y2="15"></line>
+    <line x1="17" y1="9" x2="23" y2="15"></line>
+  </svg>
+</div>
+
   
   <!-- Particle Layer -->
   <canvas id="particleCanvas"></canvas>
@@ -67,6 +100,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
