@@ -108,6 +108,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", () => {
       music.volume = 0.5;
       music.play().catch(() => {});
+      isPlaying = true;
+    }, { once: true });
+  }
+
+  if (localStorage.getItem("musicPlaying") === "true") {
+    document.addEventListener("click", () => {
+      music.volume = 0.5;
+      music.play().catch(() => {});
       soundOn.style.display = "block";
       soundOff.style.display = "none";
       isPlaying = true;
@@ -129,4 +137,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 
