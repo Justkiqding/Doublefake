@@ -95,34 +95,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 });
 
-// ===== SOUND TOGGLE =====
-document.addEventListener("DOMContentLoaded", () => {
-  const music = document.getElementById("bg-music");
-  const soundToggle = document.getElementById("soundToggle");
-
-  if (!music || !soundToggle) return;
-
-  let isPlaying = false;
-
-  soundToggle.addEventListener("click", () => {
-    if (!isPlaying) {
-      music.volume = 0.5;
-      music.play().catch(() => {});
-      soundToggle.textContent = "🔊";
-      soundToggle.classList.remove("off");
-      isPlaying = true;
-      
-      localStorage.setItem("musicPlaying", "true");
-    } else {
-      music.pause();
-      soundToggle.textContent = "🔇";
-      soundToggle.classList.add("off");
-      isPlaying = false;
-
-      localStorage.setItem("musicPlaying", "false");
-    }
-  });
-});
 
 
 
