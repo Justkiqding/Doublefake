@@ -104,6 +104,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let isPlaying = false;
 
+  if (localStorage.getItem("musicPlaying") === "true") {
+    document.addEventListener("click", () => {
+      music.volume = 0.5;
+      music.play().catch(() => {});
+      soundOn.style.display = "block";
+      soundOff.style.display = "none";
+      isPlaying = true;
+    }, { once: true });
+  }
+
   soundToggle.addEventListener("click", () => {
     if (!isPlaying) {
       music.volume = 0.5;
@@ -119,3 +129,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
